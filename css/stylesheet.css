@@ -967,6 +967,9 @@ picture {
 .footer .grid__2 ul li:nth-child(1) a {
     border: unset;
 }
+.watch__video .grid__2 .image__wrap picture {
+    width: 100%;
+}
 @media (max-width: 1440px) {
     .container {
         width: 82%;
