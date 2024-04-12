@@ -14,7 +14,7 @@ const fieldCheck = (e) => {
 var splide = new Splide( '.testiminal__slider', {
     gap    : '1rem',
     breakpoints: {
-        1024: {
+        991: {
           arrows: false,
         },
     }

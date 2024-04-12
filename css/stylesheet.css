@@ -208,14 +208,20 @@ button.submit__btn {
     box-shadow: 0px 4px 6px rgb(0 0 0 / 8%);
     border: unset;
     cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+@media (hover: hover){
+    button.submit__btn:hover {
+        background-color: #5BC8AF;
+        box-shadow: 0px 8px 6px 0px rgba(0, 0, 0, 0.08);
+        transform: translateY(-4px);
+    }
 }
 
-button.submit__btn:hover {
-    background-color: #5BC8AF;
-}
-
-button.submit__btn:focus {
+button.submit__btn:active {
     background-color: #35BB9C;
+    transform: translateY(0px);
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.08);
 }
 
 .banner .grid__2 .form__wrap .fields__wrap .field label {
@@ -351,8 +357,19 @@ button.submit__btn:focus {
     margin: 16px 0px 0px;
     color: #5BC8AF;
     letter-spacing: .5px;
+    transition: all .2s ease-in-out;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.08);
 }
-
+@media (hover: hover){
+    .about .grid__3 .btn__wrap a:hover {
+        box-shadow: 0px 8px 6px 0px rgba(0, 0, 0, 0.08);
+        transform: translateY(-4px);
+    }
+}
+.about .grid__3 .btn__wrap a:active {
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.08);
+    transform: translateY(0px);
+}
 .about .bottom__area .heading__wrap h2 {
     font-size: 40px;
     font-weight: 700;
@@ -386,10 +403,13 @@ button.submit__btn:focus {
     margin: -31px 0px 191px;
 }
 
-.testimonials .grid__1 {}
+.testimonials .grid__1 {
+    width: 980px;
+    max-width: 90%;
+    margin: auto;
+}
 
 .testimonials .testiminal__wrap {
-    width: 1033px;
     margin: auto;
     display: grid;
     grid-template-columns: 283px 1fr;
@@ -409,13 +429,22 @@ button.submit__btn:focus {
 
 .testimonials .testiminal__wrap .text__wrap {
     background-color: #194D44;
-    padding: 66px 70px 50px;
-    background-image: url(../images/comma.svg);
-    background-repeat: no-repeat;
-    background-position: 580px 40px;
-    background-size: auto;
+    padding: 18px 70px 0px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-
+.testimonials .testiminal__wrap .text__wrap:after{
+    content: '';
+    background-image: url(../images/comma.svg);
+    background-size: cover;
+    position: absolute;
+    width: 60px;
+    height: 47px;
+    top: 40px;
+    right: 65px;
+}
 .testimonials .testiminal__wrap .text__wrap span {
     display: block;
     font-size: 26px;
@@ -639,8 +668,8 @@ button.submit__btn:focus {
 
 .watch__video .grid__2 .image__wrap img {
     width: 100%;
-    /* height: auto; */
     height: 647px;
+    object-fit: cover;
 }
 
 .watch__video .grid__2 .image__wrap .video__play {
@@ -823,18 +852,21 @@ button.submit__btn:focus {
     width: 44px;
     fill: #EAEAEA;
 }
-
-.testimonials .splide__arrows button:hover svg,
-.testimonials .splide__arrows button:focus svg {
+@media (hover: hover){
+    .testimonials .splide__arrows button:hover svg{
+        fill: #5BC8AF;
+    }
+}
+.testimonials .splide__arrows button:active svg {
     fill: #5BC8AF;
 }
 
 .testimonials .splide__arrows .splide__arrow.splide__arrow--prev {
-    left: -5px;
+    left: -108px;
 }
 
 .testimonials .splide__arrows .splide__arrow.splide__arrow--next {
-    right: -5px;
+    right: -108px;
 }
 
 .banner .grid__2 .form__wrap .fields__wrap .field.error::before {
@@ -970,6 +1002,18 @@ picture {
 .watch__video .grid__2 .image__wrap picture {
     width: 100%;
 }
+@media (min-width: 1441px) {
+    .banner::before {
+        height: 145px;
+    }
+    .banner::after {
+        height: 119px;
+    }
+    .banner {
+        padding: 0px 0px 120px;
+    }
+}
+
 @media (max-width: 1440px) {
     .container {
         width: 82%;
@@ -1063,7 +1107,6 @@ picture {
     .testimonials .testiminal__wrap {
         grid-template-columns: 270px 1fr;
         gap: 34px;
-        width: 980px;
     }
     .testimonials .testiminal__wrap .text__wrap span {
         font-size: 24px;
@@ -1188,6 +1231,9 @@ picture {
         font-weight: 500;
         gap: 8px;
     }
+    .banner .grid__2 .form__wrap{
+        width: 440px;
+    }
     .about .grid__3 .btn__wrap a {
         font-size: 17px;
     }
@@ -1198,6 +1244,12 @@ picture {
     }
     .testimonials .testiminal__wrap .text__wrap p {
         font-size: 16px;
+    }
+    .testimonials .splide__arrows .splide__arrow.splide__arrow--prev{
+        left: -62px;
+    }
+    .testimonials .splide__arrows .splide__arrow.splide__arrow--next{
+        right: -62px;
     }
     .organize .grid__3 .btn__wrap a span {
         width: 226px;
@@ -1232,7 +1284,7 @@ picture {
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 991.98px) {
     .header .grid__2 .col {
         display: flex;
         align-items: flex-end;
@@ -1268,6 +1320,9 @@ picture {
     }
     .about .bottom__area .grid__3 .col:nth-child(3) {
         grid-row: 1 / 2 span;
+    }
+    .testimonials .grid__1{
+        max-width: 100%;
     }
     .organize .grid__3:nth-child(2) {
         margin: 0px 0px 40px;
@@ -1340,6 +1395,12 @@ picture {
     .watch__video .grid__2 .image__wrap picture {
         width: 100%;
     }
+    .testimonials .testiminal__wrap .text__wrap:after{
+        width: 40px;
+        height: 31px;
+        top: 19px;
+        right: 36px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1374,6 +1435,7 @@ picture {
     .banner {
         margin: -90px 0px 0px;
         overflow: hidden;
+        background-image: url(../images/banner__bg__tab.png);
     }
     .banner .grid__2 .text__wrap h1 {
         font-size: 64px;
@@ -1675,7 +1737,7 @@ picture {
     }
 }
 
-@media (max-width: 681px) {
+@media (max-width:767.98px) {
     .header .grid__2 .call__now__wrap {
         display: none;
     }
@@ -1804,7 +1866,7 @@ picture {
     }
 }
 
-@media (max-width: 568px) {
+@media (max-width: 767.98px) {
     .header .grid__2 {
         min-height: 52px;
     }
@@ -1837,6 +1899,8 @@ picture {
         font-weight: 400;
         margin: 0px;
         padding: 0px 5px;
+        max-width: 530px;
+        margin: auto;
     }
     .banner .grid__2 .text__wrap {
         margin: 0px 0px 15px;
@@ -1845,6 +1909,8 @@ picture {
         width: 98%;
         margin: 0px auto;
         padding: 40px 17px 57px;
+        max-width: 530px;
+        margin: auto;
     }
     .banner .grid__2 .form__wrap .form__heading span {
         font-size: 24px;
@@ -1871,6 +1937,10 @@ picture {
     }
     .banner::after {
         bottom: -25px;
+    }
+    .about .bottom__area {
+        max-width: 530px;
+        margin: auto;
     }
     .about .grid__3:nth-child(1) {
         display: none;
@@ -1911,18 +1981,31 @@ picture {
     .about {
         padding: 45px 0px 0px;
     }
+    .testimonials .grid__1 {
+        width: 530px;
+        max-width: 100%;
+        margin: auto;
+    }
     .testimonials .testiminal__wrap {
         width: 98%;
         margin: -53px auto 0px;
     }
     .testimonials .testiminal__wrap .image__wrap {
         transform: translate(-4px, 120px);
+        position: relative;
+        z-index: 2;
     }
     .testimonials .testiminal__wrap .text__wrap {
         padding: 145px 32px 36px;
         background-position: 241px 72px;
         background-size: 60px;
         border-radius: 8px;
+    }
+    .testimonials .testiminal__wrap .text__wrap:after{
+        width: 60px;
+        height: 47px;
+        top: 73px;
+        right: 29px;
     }
     .testimonials .testiminal__wrap .text__wrap span {
         font-size: 18px;
@@ -1938,6 +2021,10 @@ picture {
     }
     .testimonials {
         margin: -30px 0px 166px;
+    }
+    .organize .container{
+        max-width: 530px;
+        margin: auto;
     }
     .organize .heading__wrap {
         margin: 0px 0px 28px 4px;
@@ -2092,5 +2179,11 @@ picture {
         overflow: hidden;
         background-image: url(../images/banner__bg__mobile.jpg);
         background-position: -6px 35px;
+    }
+}
+
+@media (min-width: 453px){
+    .organize .heading__wrap h2{
+        z-index: 2;
     }
 }
