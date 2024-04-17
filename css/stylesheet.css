@@ -341,6 +341,10 @@ button.submit__btn:active {
     margin: 0px 0px 0px -1px;
     color: #333333;
 }
+.about .grid__3 .text__wrap p span {
+    display: inline;
+    margin: 0px 0px 0px 7px;
+}
 
 .about .grid__3 .btn__wrap {}
 
@@ -442,7 +446,7 @@ button.submit__btn:active {
     position: absolute;
     width: 60px;
     height: 47px;
-    top: 40px;
+    top: 39px;
     right: 65px;
 }
 .testimonials .testiminal__wrap .text__wrap span {
@@ -1002,6 +1006,32 @@ picture {
 .watch__video .grid__2 .image__wrap picture {
     width: 100%;
 }
+.about .grid__3 .text__wrap p.tablet__mood, .about .grid__3 .text__wrap p.mobile__mood {
+    display: none;
+}
+.organize .grid__3 .btn__wrap a span.tablet__mood {
+    display: none;
+}
+.watch__video .grid__2 .detail__wrap .points__wrap .text__wrap span.tablet__mood {
+    display: none;
+}
+.footer .grid__2 .text__wrap p.tablet__mood {
+    display: none;
+}
+.banner .grid__2 .text__wrap p.tablet__mood {
+    display: none;
+}
+.organize .grid__3 .text__wrap p.tablet__mood {
+    display: none;
+}
+
+@media (min-width: 2170px) {
+    .banner::before,
+    .banner::after {
+        content: unset;
+    }
+}
+
 @media (min-width: 1441px) {
     .banner::before {
         height: 145px;
@@ -1011,6 +1041,9 @@ picture {
     }
     .banner {
         padding: 0px 0px 120px;
+    }
+    .watch__video .grid__2 .detail__wrap {
+        width: 543px;
     }
 }
 
@@ -1118,7 +1151,7 @@ picture {
         word-spacing: 0;
         letter-spacing: 0;
         line-height: 28px;
-        margin: 4px 0px 0px -4px;
+        margin: 1px 0px 0px -4px;
     }
     .testimonials .testiminal__wrap .text__wrap {
         background-position: 551px 38px;
@@ -1211,6 +1244,13 @@ picture {
     }
     .banner .grid__2 .form__wrap .fields__wrap .field.full__width label {
         background-color: #2f6d61;
+    }
+
+}
+
+@media (max-width: 1366px) {
+    .watch__video .grid__2 .detail__wrap .points__wrap .text__wrap p {
+        padding: 0px 40px 0px 0px;
     }
 }
 
@@ -1449,8 +1489,40 @@ picture {
         line-height: 28px;
         font-size: 18px;
         font-weight: 400;
-        margin: 0px 0px 0px 0px;
+        margin: 0px 0px 0px -4px;
         padding: 0px;
+    }
+    .banner .grid__2 .text__wrap p.desktop__mood {
+        display: none;
+    }
+    .banner .grid__2 .text__wrap p.tablet__mood {
+        display: block;
+    }
+    .banner .grid__2 .text__wrap p.tablet__mood span.cr7__span__1 {
+        display: inline;
+        margin: 0px 6px 0px 0px;
+    }
+    .banner .grid__2 .text__wrap p.tablet__mood span {
+        display: inline-block;
+    }
+    .banner .grid__2 .text__wrap p span:nth-child(2) {
+        margin: 0px 0px 0px 4px;
+    }
+    
+    .banner .grid__2 .text__wrap p span:nth-child(2) span {
+        margin: 0px 0px 0px 4px;
+    }
+    
+    .banner .grid__2 .text__wrap p span:nth-child(3) {
+        margin: 0px 0px 0px 3px;
+    }
+    
+    .banner .grid__2 .text__wrap p span:nth-child(4) {
+        margin: 0px 0px 0px -5px;
+    }
+    
+    .banner .grid__2 .text__wrap p span:nth-child(5) {
+        margin: 0px 0px 0px 4px;
     }
     .banner .grid__2 .text__wrap p br {
         display: none;
@@ -1468,7 +1540,7 @@ picture {
     }
     .banner .grid__2 .form__wrap .form__heading span {
         font-size: 28px;
-        margin: -4px 0px 34px;
+        margin: -4px 0px 34px -2px;
     }
     .banner .grid__2 .form__wrap .fields__wrap .field label {
         left: 16px;
@@ -1545,7 +1617,7 @@ picture {
         font-size: 14px;
         line-height: 24px;
         font-weight: 400;
-        margin: 0px 0px 0px -1px;
+        margin: 0px 0px 0px -1.5px;
     }
     .about .bottom__area .grid__3 .col:nth-child(1) {
         grid-column: 1 / 1 span;
@@ -1633,6 +1705,12 @@ picture {
     .organize .grid__3 .btn__wrap a span {
         width: fit-content;
     }
+    .organize .grid__3 .btn__wrap a span.desktop__mood {
+        display: none;
+    }
+    .organize .grid__3 .btn__wrap a span.tablet__mood {
+        display: block;
+    }
     .about {
         padding: 45px 0px 38px;
     }
@@ -1647,6 +1725,12 @@ picture {
     }
     .organize .grid__3 .text__wrap p {
         margin: 1px 0px 0px -1px;
+    }
+    .organize .grid__3:nth-child(2) .organize__second__text .text__wrap p.desktop__mood {
+        display: none;
+    }
+    .organize .grid__3:nth-child(2) .organize__second__text .text__wrap p.tablet__mood {
+        display: block;
     }
     .organize .grid__3:nth-child(3) {
         gap: 25px;
@@ -1667,6 +1751,13 @@ picture {
         font-size: 24px;
         letter-spacing: -.1px;
         margin: 0px 0px 7px;
+        word-spacing: 1px;
+    }
+    .watch__video .grid__2 .detail__wrap .points__wrap .text__wrap span.desktop__mood {
+        display: none;
+    }
+    .watch__video .grid__2 .detail__wrap .points__wrap .text__wrap span.tablet__mood {
+        display: block;
     }
     .watch__video .grid__2 .detail__wrap .points__wrap .text__wrap p {
         margin: 0px 0px 0px 0px;
@@ -1682,7 +1773,7 @@ picture {
         z-index: 4;
         bottom: unset;
         left: 0;
-        top: -40px;
+        top: -43px;
         overflow: hidden;
         width: 200px;
         height: 200px;
@@ -1705,7 +1796,7 @@ picture {
         left: 0;
         right: 0;
         margin: auto;
-        bottom: 22px;
+        bottom: 24px;
     }
     .footer .grid__2 {
         flex-direction: column;
@@ -1713,9 +1804,16 @@ picture {
         min-height: 0px;
         padding: 34px 0px;
         transform: translate(-11px, 0px);
+        margin: -2px 0px 0px;
     }
     .footer .grid__2 .text__wrap p {
         margin: 0px 0px 0px 0px;
+    }
+    .footer .grid__2 .text__wrap p.desktop__mood {
+        display: none;
+    }
+    .footer .grid__2 .text__wrap p.tablet__mood {
+        display: block;
     }
     .video__popup {
         width: 80%;
@@ -1734,6 +1832,32 @@ picture {
     }
     .banner .grid__2 .form__wrap .fields__wrap .field.full__width label {
         background-color: #2e6b5d;
+    }
+    .about .grid__3 .text__wrap p.desktop__mood {
+        display: none;
+    }
+    .about .grid__3 .text__wrap p.tablet__mood {
+        display: inline-block;
+    }
+    .about .grid__3 .text__wrap p span.cr7__span {
+        display: block;
+        margin: 0px;
+    }
+    .organize .grid__3 .btn__wrap a img {
+        right: -31px;
+    }
+    .watch__video .grid__2 .detail__wrap {
+        width: 100%;
+    }
+    .watch__video .grid__2 .detail__wrap .points__wrap {
+        margin: -1px 0px 27px 46px;
+        padding: 0px 25px 0px 0px;
+    }
+    .watch__video .grid__2 .detail__wrap .points__wrap:nth-child(3) {
+        margin: 0px 0px 13px 46px;
+    }
+    .footer .grid__2 ul li a {
+        margin: -3px 0px 0px 10px;
     }
 }
 
@@ -1901,6 +2025,24 @@ picture {
         padding: 0px 5px;
         max-width: 530px;
         margin: auto;
+    }
+    .banner .grid__2 .text__wrap p.tablet__mood span {
+        display: inline;
+    }
+    .banner .grid__2 .text__wrap p span:nth-child(2) {
+        margin: 0px 0px 0px 0px;
+    }
+    .banner .grid__2 .text__wrap p span:nth-child(2) span {
+        margin: 0px 0px 0px 0px;
+    }
+    .banner .grid__2 .text__wrap p span:nth-child(3) {
+        margin: 0px 0px 0px 0px;
+    }
+    .banner .grid__2 .text__wrap p span:nth-child(4) {
+        margin: 0px 0px 0px 0px;
+    }
+    .banner .grid__2 .text__wrap p span:nth-child(5) {
+        margin: 0px 0px 0px 4px;
     }
     .banner .grid__2 .text__wrap {
         margin: 0px 0px 15px;
@@ -2091,6 +2233,7 @@ picture {
     .watch__video .grid__2 .detail__wrap .points__wrap {
         grid-template-columns: 36px 1fr;
         margin: 0px 0px 19px;
+        padding: 0px;
     }
     .watch__video .grid__2 .detail__wrap .points__wrap .text__wrap span {
         font-size: 18px;
@@ -2103,7 +2246,7 @@ picture {
         line-height: 24px;
     }
     .watch__video .grid__2 .detail__wrap .points__wrap:nth-child(3) {
-        margin: 0px 0px 17px;
+        margin: 0px 0px 16px;
     }
     .organize .grid__3 .btn__wrap .tool__tip {
         z-index: 10;
@@ -2131,10 +2274,11 @@ picture {
     }
     .watch__video .grid__2 .image__wrap .logo {
         width: 226.09px;
-        bottom: 24px;
+        bottom: 22px;
     }
     .footer .grid__2 {
         transform: translate(2px, 0px);
+        margin: 1px 0px 0px;
     }
     .footer .grid__2 .text__wrap p {
         font-size: 12px;
@@ -2178,12 +2322,34 @@ picture {
         margin: -90px 0px 0px;
         overflow: hidden;
         background-image: url(../images/banner__bg__mobile.jpg);
-        background-position: -6px 35px;
+        background-position: 0px 35px;
+    }
+    .about .grid__3 .text__wrap p.tablet__mood {
+        display: none;
+    }
+    .about .grid__3 .text__wrap p.mobile__mood {
+        display: block;
+    }
+    .organize .grid__3 .btn__wrap a img {
+        right: -31px;
+        top: 2px;
+    }
+    .organize .grid__3:nth-child(2) .organize__first__text .text__wrap p.desktop__mood {
+        display: none;
+    }
+    .organize .grid__3:nth-child(2) .organize__first__text .text__wrap p.tablet__mood {
+        display: block;
     }
 }
 
 @media (min-width: 453px){
     .organize .heading__wrap h2{
         z-index: 2;
+    }
+    
+}
+@media (max-width: 361.98px){
+    .banner{
+        background-position: -6px 35px;
     }
 }
